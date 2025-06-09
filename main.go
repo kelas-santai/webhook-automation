@@ -7,6 +7,7 @@ import (
 	//"os/exec"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/logger"
 	"github.com/joho/godotenv"
 )
 
@@ -28,6 +29,7 @@ func main() {
 	}
 
 	app := fiber.New()
+	app.Use(logger.New())
 
 	app.Get("/hello", func(c *fiber.Ctx) error {
 		return c.JSON(fiber.Map{"message": "Hello, world!"})
