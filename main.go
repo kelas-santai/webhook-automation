@@ -83,7 +83,7 @@ func handleWebhook(event string, data map[string]interface{}, target string) {
 		if ref == "refs/heads/main" {
 			if target == "backend" {
 				fmt.Println("Triggering backend deployment...")
-				cmd := exec.Command("/wehbooks/deploy.sh")
+				cmd := exec.Command("./wehbooks/deploy.sh")
 
 				// Jalankan perintah dan ambil output & error-nya
 				output, err := cmd.CombinedOutput()
