@@ -1,4 +1,4 @@
-
+#!/bin/bash
 # Logging
 LOG_FILE="/home/kelas-santai/pertemuan-1/bagja/myapp/auto/deploy.log"
 echo "$(date) - Starting deployment" >> $LOG_FILE
