@@ -1,10 +1,9 @@
 
 # Logging
-#di lihat terlebih dahulu untuk lokasi foldernya
-LOG_FILE="/home/kelas-santai/webhooks/webhook-automation/wehbooksdeploy.log"
+LOG_FILE="/home/kelas-santai/pertemuan-1/bagja/myapp/auto/deploy.log"
 echo "$(date) - Starting deployment" >> $LOG_FILE
 
-#masuk ke projeck yang akan di tarik
+# Update code & rebuild
 cd /home/kelas-santai/pertemuan-1/bagja/myapp/backend-golang
 
 # 1. HAPUS SUDO DARI GIT PULL
