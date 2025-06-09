@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 	"os"
-	//"os/exec"
+	"os/exec"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/logger"
@@ -83,7 +83,7 @@ func handleWebhook(event string, data map[string]interface{}, target string) {
 		if ref == "refs/heads/main" {
 			if target == "backend" {
 				fmt.Println("Triggering backend deployment...")
-				//exec.Command("/home/kelas-santai/webhooks/webhooks/deploy.sh").Start()
+				exec.Command("/wehbooks/deploy.sh").Start()
 
 			} else if target == "frontend" {
 				fmt.Println("Triggering frontend deployment...")
