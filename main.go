@@ -33,7 +33,7 @@ func main() {
 		return c.JSON(fiber.Map{"message": "Hello, world!"})
 	})
 
-	app.Post("/webhook-backend", func(c *fiber.Ctx) error {
+	app.Post("/webhook-backend-bagja", func(c *fiber.Ctx) error {
 		event := c.Get("X-GitHub-Event")
 		var payload map[string]interface{}
 		if err := c.BodyParser(&payload); err != nil {
