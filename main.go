@@ -81,10 +81,11 @@ func handleWebhook(event string, data map[string]interface{}, target string) {
 		if ref == "refs/heads/main" {
 			if target == "backend" {
 				fmt.Println("Triggering backend deployment...")
-				exec.Command("/home/kelas-santai/webhooks/webhooks/deploy.sh").Start()
+				//exec.Command("/home/kelas-santai/webhooks/webhooks/deploy.sh").Start()
+
 			} else if target == "frontend" {
 				fmt.Println("Triggering frontend deployment...")
-				exec.Command("/home/kelas-santai/webhooks/webhooks/deploy-fe.sh").Start()
+				//exec.Command("/home/kelas-santai/webhooks/webhooks/deploy-fe.sh").Start()
 			}
 		}
 	default:
